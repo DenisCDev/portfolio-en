@@ -49,7 +49,7 @@ const HeroSection = () => {
               Contact Me
             </Link>
             <Link
-              href="/download/Denis Scarabelli Resume.pdf"
+              href="/download/Curriculum Denis Scarabelli.pdf"
               target="_blank"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary to-thirdy hover:bg-slate-800 text-white mt-3"
             >
