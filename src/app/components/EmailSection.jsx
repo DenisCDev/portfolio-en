@@ -1,15 +1,18 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { FaGithub, FaInstagram, FaLinkedin, FaMedium } from 'react-icons/fa';
 import Link from "next/link";
 
+// Email section component
 const EmailSection = () => {
+  // State variable for form data
   const [formData, setFormData] = useState({
     email: "",
     subject: "",
     message: "",
   });
 
+  // Function to handle input changes in the form
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -18,6 +21,7 @@ const EmailSection = () => {
     }));
   };
 
+  // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -35,33 +39,36 @@ const EmailSection = () => {
       });
 
       if (response.ok) {
-        alert("Mensagem enviada com sucesso!"); // Use alert for notification
+        alert("Message sent successfully!"); // Use alert for notification
         setFormData({
           email: "",
           subject: "",
           message: "",
         });
       } else {
-        alert("Erro ao enviar mensagem.");
+        alert("Error sending message.");
       }
     } catch (error) {
-      alert(`Erro ao enviar mensagem: ${error.message}`);
+      alert(`Error sending message: ${error.message}`);
     }
   };
 
+  // JSX for the email section
   return (
     <section
       id="contact"
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
     >
+      {/* Background radial gradient */}
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2">
-          Fale comigo
+          Get in Touch
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          Estou sempre aberto a conversar, entre em contato por essa área para nos falarmos
+          I'm always open to chat, reach out through this area to talk
         </p>
+        {/* Social links */}
         <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/DenisCDev" target="_blank">
             <FaGithub size={40} className="text-white hover:text-yellow-500" />
@@ -77,14 +84,16 @@ const EmailSection = () => {
           </Link>
         </div>
       </div>
+      {/* Email form */}
       <div>
         <form className="flex flex-col" onSubmit={handleSubmit}>
+          {/* Email input */}
           <div className="mb-6">
             <label
               htmlFor="email"
               className="text-white block mb-2 text-sm font-medium"
             >
-              Seu email
+              Your email
             </label>
             <input
               name="email"
@@ -94,15 +103,16 @@ const EmailSection = () => {
               value={formData.email}
               onChange={handleInputChange}
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="seuemail@gmail.com"
+              placeholder="youremail@gmail.com"
             />
           </div>
+          {/* Subject input */}
           <div className="mb-6">
             <label
               htmlFor="subject"
               className="text-white block text-sm mb-2 font-medium"
             >
-              Assunto
+              Subject
             </label>
             <input
               name="subject"
@@ -112,15 +122,16 @@ const EmailSection = () => {
               value={formData.subject}
               onChange={handleInputChange}
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="O assunto é..."
+              placeholder="The subject is..."
             />
           </div>
+          {/* Message textarea */}
           <div className="mb-6">
             <label
               htmlFor="message"
               className="text-white block text-sm mb-2 font-medium"
             >
-              Mensagem
+              Message
             </label>
             <textarea
               name="message"
@@ -128,14 +139,15 @@ const EmailSection = () => {
               value={formData.message}
               onChange={handleInputChange}
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="Vamos falar sobre..."
+              placeholder="Let's talk about..."
             />
           </div>
+          {/* Submit button */}
           <button
             type="submit"
             className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
           >
-            Enviar mensagem
+            Send message
           </button>
         </form>
       </div>
@@ -143,4 +155,5 @@ const EmailSection = () => {
   );
 };
 
+// Exporting the EmailSection component as default
 export default EmailSection;

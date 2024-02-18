@@ -8,61 +8,61 @@ const projectsData = [
   {
     id: 1,
     title: "IntLab",
-    description: "Site de estúdio de design",
+    description: "Design studio website",
     image: "/images/projects/2.png",
-    tag: ["Todos", "Web"],
+    tag: ["All", "Web"],
     gitUrl: "https://intlabs.com.br/",
     previewUrl: "https://intlabs.com.br/",
   },
   {
     id: 2,
     title: "Verve",
-    description: "Site de café tematico de jazz",
+    description: "Jazz-themed coffee website",
     image: "/images/projects/3.png",
-    tag: ["Todos", "Web"],
+    tag: ["All", "Web"],
     gitUrl: "https://verve-cafe.netlify.app/",
     previewUrl: "https://verve-cafe.netlify.app/",
   },
   {
     id: 3,
     title: "React List",
-    description: "Criador de lista usando react",
+    description: "List creator using react",
     image: "/images/projects/4-1.png",
-    tag: ["Todos", "Web"],
+    tag: ["All", "Web"],
     gitUrl: "https://github.com/DenisCDev/ListaDePresencaReact",
     previewUrl: "https://listapresencareact.netlify.app/",
   },
   {
     id: 4,
     title: "API RPG Node Express",
-    description: "API de registro de personagens RPG",
+    description: "RPG character registration API",
     image: "/images/projects/4.png",
-    tag: ["Todos", "API"],
+    tag: ["All", "API"],
     gitUrl: "https://github.com/DenisCDev/nodejsexpress-api",
     previewUrl: "https://github.com/DenisCDev/nodejsexpress-api",
   },
   {
     id: 5,
-    title: "API PC Java Spring Booot",
-    description: "API de registro de computadores com especificação de peças",
+    title: "API PC Java Spring Boot",
+    description: "Computer registration API with part specification",
     image: "/images/projects/5.png",
-    tag: ["Todos", "API"],
+    tag: ["All", "API"],
     gitUrl: "https://github.com/DenisCDev/API-RegistroDeComputadores",
     previewUrl: "https://github.com/DenisCDev/API-RegistroDeComputadores",
   },
   {
     id: 6,
-    title: "App React Native Aluguel de Carros",
-    description: "Aplicativo para aluguel de carros de luxo",
+    title: "React Native Car Rental App",
+    description: "Luxury car rental application",
     image: "/images/projects/6.png",
-    tag: ["Todos", "Mobile"],
+    tag: ["All", "Mobile"],
     gitUrl: "https://github.com/DenisCDev/reactnative-car-app",
     previewUrl: "https://github.com/DenisCDev/reactnative-car-app",
   },
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("Todos");
+  const [tag, setTag] = useState("All");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -82,13 +82,13 @@ const ProjectsSection = () => {
   return (
     <section id="projects">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        Meus Projetos
+        My Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
-          name="Todos"
-          isSelected={tag === "Todos"}
+          name="All"
+          isSelected={tag === "All"}
         />
         <ProjectTag
           onClick={handleTagChange}

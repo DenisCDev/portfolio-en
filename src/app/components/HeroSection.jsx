@@ -17,7 +17,7 @@ const HeroSection = () => {
         >
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary">
-              Olá eu sou{" "}
+              Hello, I'm{" "}
             </span>
             <br></br>
             <TypeAnimation
@@ -28,7 +28,7 @@ const HeroSection = () => {
                 1500,
                 "UI/UX Designer",
                 1500,
-                "Eng. de Software",
+                "Software Engineer",
                 1500,
               ]}
               wrapper="span"
@@ -37,7 +37,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            <blockquote>&quot;A programação permite que você pense de forma clara, estruturada e lógica. Os grandes programadores não são apenas solucionadores de problemas; eles são criadores de possibilidades.&ldquo;<br></br>
+            <blockquote>&quot;Programming allows you to think clearly, structured, and logically. Great programmers are not just problem solvers; they are possibilities creators.&ldquo;<br></br>
               <cite> - Bill Gates</cite>
             </blockquote>
           </p>
@@ -46,15 +46,15 @@ const HeroSection = () => {
               href="/#contact"
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-thirdy hover:bg-slate-200 text-white"
             >
-              Fale Comigo
+              Contact Me
             </Link>
             <Link
-              href="/download/Curriculo Denis Scarabelli.pdf"
+              href="/download/Denis Scarabelli Resume.pdf"
               target="_blank"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary to-thirdy hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Baixar Curriculo
+                Download Resume
               </span>
             </Link>
           </div>
