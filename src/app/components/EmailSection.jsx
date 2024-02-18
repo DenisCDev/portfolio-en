@@ -66,7 +66,7 @@ const EmailSection = () => {
           Get in Touch
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          I'm always open to chat, reach out through this area to talk
+          I&apos;m always open to chat, reach out through this area to talk
         </p>
         {/* Social links */}
         <div className="socials flex flex-row gap-2">

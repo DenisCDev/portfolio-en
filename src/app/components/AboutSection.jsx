@@ -71,7 +71,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a front-end developer passionate about creating innovative solutions. Currently pursuing a degree in Computer Science, I am constantly seeking to enhance my technical skills and apply them to challenging projects. I have experience in web development, with a track record of modernizing legacy systems and creating effective solutions. I am an efficient communicator and work well in collaborative teams. I am always eager to learn and open to new challenges.
+            I am a front-end developer passionate about creating innovative solutions. Currently pursuing a degree in Computer Science, constantly seeking to enhance my technical skills and apply them to challenging projects. I have experience in web development, with a track record of modernizing legacy systems and creating effective solutions. I am an efficient communicator and work well in collaborative teams. Always eager to learn and open to new challenges.
           </p>
           <div className="flex flex-row justify-start mt-8">
             {/* Rendering tab buttons */}
